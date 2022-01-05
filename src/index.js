@@ -14,7 +14,7 @@ app.use(bodyParser.json())
 app.use(authRoutes)
 app.use(trackRoutes)
 
-const mongoUri = `mongodb+srv://admin:${process.env.MONGODB_USER_PASS}@cluster0.f7wzc.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`
+const mongoUri = `mongodb+srv://admin:${process.env.MONGODB_USER_PASS}@cluster0.f7wzc.mongodb.net/test?retryWrites=true&w=majority`
 mongoose.connect(mongoUri)
 mongoose.connection.on('connected', () => {
   console.log('Connected to mongo instance')
